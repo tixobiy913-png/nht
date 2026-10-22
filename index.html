@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Veloxnet | Internet de Alta Velocidade em São Paulo/SP</title>
+  <meta name="description" content="Veloxnet Internet de Alta Velocidade LTDA - Provedor de internet em São Paulo/SP. Serviços de comunicação multimídia (SCM) com qualidade, estabilidade e atendimento personalizado.">
+  <meta name="keywords" content="internet são paulo, provedor de internet, banda larga, scm, veloxnet, internet fibra">
+  <meta name="author" content="Veloxnet Internet de Alta Velocidade LTDA">
+  <meta property="og:title" content="Veloxnet | Internet de Alta Velocidade">
+  <meta property="og:description" content="Provedor de internet em São Paulo/SP. Serviços de comunicação multimídia com qualidade e estabilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://placehold.co/1200x630/0A2540/FFFFFF?text=Veloxnet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* RESET & BASE */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #0A2540;
+      background: #FFFFFF;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+
+    @media (max-width: 768px) { .container { padding: 0 1.5rem; } }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .logo { font-family: 'Playfair Display', serif; }
+
+    h1 { font-size: 4rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+    h2 { font-size: 2.5rem; font-weight: 600; margin-bottom: 1rem; position: relative; display: inline-block; }
+    h2:after {
+      content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+      width: 60px; height: 3px; background: linear-gradient(90deg, #1E90FF, #63B3ED); border-radius: 3px;
+    }
+    .section-header h2:after { left: 50%; transform: translateX(-50%); }
+    h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      h3 { font-size: 1.25rem; }
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem;
+      border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;
+      cursor: pointer; border: none; font-size: 0.9rem; letter-spacing: 0.5px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #1E90FF, #0066CC); color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px); box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+      background: linear-gradient(135deg, #0066CC, #0052A3);
+    }
+    .btn-outline { background: transparent; border: 2px solid #1E90FF; color: #1E90FF; }
+    .btn-outline:hover { background: #1E90FF; color: #FFFFFF; transform: translateY(-3px); }
+    .btn-lg { padding: 1.2rem 2.5rem; font-size: 1rem; }
+
+    /* NAVIGATION */
+    .nav {
+      position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+      z-index: 1000; padding: 1rem 0; transition: all 0.3s ease;
+    }
+    .nav.scrolled { padding: 0.75rem 0; background: rgba(255, 255, 255, 0.98); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem; font-weight: 700;
+      text-decoration: none; color: #0A2540; font-family: 'Playfair Display', serif;
+    }
+    .nav-brand svg { width: 32px; height: 32px; color: #1E90FF; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      text-decoration: none; color: #4A4A4A; font-weight: 500; transition: color 0.3s; position: relative;
+    }
+    .nav-links a:after {
+      content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+      background: #1E90FF; transition: width 0.3s;
+    }
+    .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
+    .nav-links a:hover { color: #1E90FF; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #0A2540; }
+
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0; background: #FFFFFF;
+        flex-direction: column; padding: 1.5rem; gap: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center;
+      }
+      .nav-links.active { display: flex; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    /* HERO */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      padding: 8rem 0 5rem; background: linear-gradient(135deg, #0A2540 0%, #143A5C 50%, #0A2540 100%); overflow: hidden;
+    }
+    .hero-bg-pattern {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path fill="none" stroke="%23FFFFFF" stroke-width="0.5" d="M20,20 L80,20 M20,30 L80,30 M20,40 L80,40 M20,50 L80,50 M20,60 L80,60 M20,70 L80,70 M20,80 L80,80 M30,20 L30,80 M40,20 L40,80 M50,20 L50,80 M60,20 L60,80 M70,20 L70,80"/><circle cx="50" cy="50" r="8" fill="none" stroke="%23FFFFFF" stroke-width="0.5"/><circle cx="50" cy="50" r="15" fill="none" stroke="%23FFFFFF" stroke-width="0.5"/></svg>');
+      background-repeat: repeat; opacity: 0.1;
+    }
+    .hero-content { position: relative; max-width: 700px; color: #FFFFFF; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem;
+      margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero-badge i { font-size: 1rem; }
+    .hero-desc { font-size: 1.2rem; margin: 1.5rem 0; opacity: 0.9; line-height: 1.8; }
+    .hero-stats { display: flex; gap: 2rem; margin: 2rem 0; }
+    .hero-stat { text-align: center; }
+    .hero-stat .number { font-size: 2rem; font-weight: 700; color: #1E90FF; font-family: 'Playfair Display', serif; }
+    .hero-stat .label { font-size: 0.8rem; opacity: 0.8; }
+    .hero-disclaimer {
+      display: flex; gap: 1rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(8px);
+      padding: 1rem 1.5rem; border-radius: 1rem; font-size: 0.75rem; margin: 1.5rem 0;
+      border-left: 3px solid #1E90FF;
+    }
+    .hero-buttons { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 1rem; }
+
+    .floating-shape {
+      position: absolute; border-radius: 50%; background: rgba(30, 144, 255, 0.1);
+      filter: blur(60px); z-index: 1;
+    }
+    .shape-1 { width: 300px; height: 300px; top: 20%; right: -100px; }
+    .shape-2 { width: 200px; height: 200px; bottom: 10%; left: -50px; }
+
+    /* STATS SECTION */
+    .stats-section {
+      background: linear-gradient(135deg, #F0F7FF 0%, #E6F0FA 100%);
+      padding: 4rem 0; margin-top: -2rem; position: relative; z-index: 5;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+    .stat-card {
+      background: #FFFFFF; padding: 2rem; border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s;
+    }
+    .stat-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .stat-icon {
+      width: 70px; height: 70px; background: linear-gradient(135deg, #1E90FF20, #63B3ED20);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem; font-size: 2rem; color: #1E90FF;
+    }
+    .stat-number { font-size: 2.8rem; font-weight: 700; color: #0A2540; font-family: 'Playfair Display', serif; }
+    .stat-label { color: #3A5A7A; font-size: 0.9rem; font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .stat-card { padding: 1.5rem; }
+      .stat-number { font-size: 2rem; }
+    }
+
+    /* SECTIONS */
+    .section { padding: 5rem 0; }
+    .section-muted { background: #F0F7FF; }
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+    .section-subtitle {
+      color: #1E90FF; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;
+      font-weight: 600; margin-bottom: 1rem; display: inline-block;
+    }
+
+    /* PRODUCT CARDS */
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .product-card {
+      background: #FFFFFF; border-radius: 1.5rem; overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s; position: relative;
+    }
+    .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .product-image {
+      height: 250px; background: linear-gradient(135deg, #E6F0FA, #D0E4F5);
+      display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+    }
+    .product-image i { font-size: 4rem; color: #1E90FF; transition: transform 0.3s; }
+    .product-card:hover .product-image i { transform: scale(1.1); }
+    .product-tag {
+      position: absolute; top: 1rem; right: 1rem; background: #1E90FF; color: #FFFFFF;
+      padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.7rem; font-weight: 600;
+    }
+    .product-info { padding: 1.5rem; text-align: center; }
+    .product-info h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .product-info p { color: #3A5A7A; font-size: 0.85rem; }
+
+    @media (max-width: 1024px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+
+    /* SERVICES GRID */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .service-card {
+      background: #FFFFFF; padding: 2.5rem 2rem; border-radius: 1.5rem; text-align: center;
+      transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .service-icon {
+      width: 80px; height: 80px; background: linear-gradient(135deg, #1E90FF20, #63B3ED20);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem; font-size: 2.2rem; color: #1E90FF;
+    }
+    .service-card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .service-card p { color: #3A5A7A; line-height: 1.7; }
+
+    @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* TESTIMONIALS */
+    .testimonials-section {
+      background: linear-gradient(135deg, #0A2540 0%, #143A5C 100%);
+      color: #FFFFFF; position: relative; overflow: hidden;
+    }
+    .testimonials-section .section-header h2 { color: #FFFFFF; }
+    .testimonials-section .section-header h2:after { background: linear-gradient(90deg, #1E90FF, #63B3ED); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+    .testimonial-card {
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2rem;
+      border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s;
+    }
+    .testimonial-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.15); }
+    .testimonial-text { font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+    .testimonial-avatar {
+      width: 50px; height: 50px; background: #1E90FF; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;
+    }
+    .testimonial-info h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+    .testimonial-info p { font-size: 0.8rem; opacity: 0.7; }
+    .stars { color: #FFD700; margin-top: 0.5rem; font-size: 0.8rem; }
+
+    @media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    /* BRANDS */
+    .brands-section { padding: 3rem 0; background: #FFFFFF; }
+    .brands-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem;
+      align-items: center; justify-items: center;
+    }
+    .brand-item {
+      opacity: 0.6; transition: opacity 0.3s; font-size: 1.5rem; font-weight: 600;
+      color: #4A4A4A; text-align: center;
+    }
+    .brand-item:hover { opacity: 1; }
+
+    @media (max-width: 768px) { .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+
+    /* FAQ */
+    .faq-grid { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      background: #FFFFFF; border: 1px solid #D0E4F5; border-radius: 1rem;
+      margin-bottom: 1rem; overflow: hidden; transition: all 0.3s;
+    }
+    .faq-item:hover { border-color: #1E90FF; }
+    .faq-question {
+      padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; font-weight: 600; background: #FFFFFF;
+    }
+    .faq-question i { transition: transform 0.3s; color: #1E90FF; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; padding: 0 1.5rem; overflow: hidden; transition: all 0.3s;
+      color: #3A5A7A; border-top: 1px solid transparent;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px; padding: 0 1.5rem 1.2rem; border-top-color: #D0E4F5;
+    }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .contact-card {
+      background: #FFFFFF; padding: 2rem; border-radius: 1.5rem; text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s;
+    }
+    .contact-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .contact-icon {
+      width: 70px; height: 70px; background: linear-gradient(135deg, #1E90FF20, #63B3ED20);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem; font-size: 1.8rem; color: #1E90FF;
+    }
+    .contact-card h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .contact-card p, .contact-card a { color: #3A5A7A; text-decoration: none; line-height: 1.6; }
+    .contact-card a:hover { color: #1E90FF; }
+
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* MAP */
+    .map-section { padding: 0 0 4rem; }
+    .map-container {
+      background: #E6F0FA; border-radius: 1.5rem; overflow: hidden; height: 400px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #D0E4F5, #B8D4EC);
+    }
+    .map-placeholder { text-align: center; }
+    .map-placeholder i { font-size: 4rem; color: #1E90FF; margin-bottom: 1rem; }
+
+    /* FOOTER */
+    .footer { background: #061A2E; color: #C8DDF0; padding-top: 4rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 2.5rem; margin-bottom: 3rem; }
+    .footer-brand {
+      display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem; font-weight: 700;
+      margin-bottom: 1rem; color: #FFFFFF; font-family: 'Playfair Display', serif;
+    }
+    .footer-brand svg { width: 28px; height: 28px; color: #1E90FF; }
+    .footer h4 { color: #FFFFFF; margin-bottom: 1.2rem; font-size: 1.1rem; font-family: 'Playfair Display', serif; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.8rem; }
+    .footer-links a, .footer-links button {
+      color: #C8DDF0; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;
+      background: none; border: none; cursor: pointer; text-align: left;
+    }
+    .footer-links a:hover, .footer-links button:hover { color: #1E90FF; }
+    .footer-data p { font-size: 0.85rem; margin-bottom: 0.5rem; line-height: 1.5; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+    .social-links a {
+      width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; color: #C8DDF0; transition: all 0.3s;
+    }
+    .social-links a:hover { background: #1E90FF; color: #FFFFFF; transform: translateY(-3px); }
+    .footer-bottom {
+      border-top: 1px solid #143A5C; padding: 1.5rem 0; display: flex;
+      justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem;
+    }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links button, .footer-bottom-links a {
+      background: none; border: none; color: #C8DDF0; cursor: pointer; font-size: 0.8rem;
+    }
+    .footer-bottom-links button:hover, .footer-bottom-links a:hover { color: #1E90FF; }
+
+    @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 640px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* COOKIE BANNER */
+    .cookie-banner {
+      position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 1100; max-width: 400px;
+      background: #FFFFFF; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2); transition: transform 0.3s;
+    }
+    .cookie-banner.hidden { transform: translateY(150%); }
+    .cookie-content { padding: 1.2rem; }
+    .cookie-content h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .cookie-content p { font-size: 0.75rem; color: #3A5A7A; margin-bottom: 1rem; }
+    .cookie-buttons { display: flex; gap: 0.5rem; }
+    .cookie-buttons button { flex: 1; padding: 0.6rem; border-radius: 50px; font-size: 0.75rem; cursor: pointer; }
+
+    /* MODAL */
+    .modal {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center; padding: 1rem;
+    }
+    .modal.active { display: flex; }
+    .modal-content {
+      background: #FFFFFF; border-radius: 1.5rem; max-width: 700px; width: 100%;
+      max-height: 85vh; overflow-y: auto; position: relative; padding: 2rem;
+    }
+    .modal-content h1 { font-size: 1.5rem; margin-bottom: 1rem; color: #0A2540; }
+    .modal-content h2 { font-size: 1.1rem; margin: 1rem 0 0.5rem; }
+    .modal-content p, .modal-content li { font-size: 0.85rem; color: #4A4A4A; }
+    .modal-close { position: sticky; top: 0; display: flex; justify-content: flex-end; margin-bottom: 1rem; }
+    .modal-close button {
+      background: #F0F0F0; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+    }
+    .legal-notice {
+      background: #F0F7FF; padding: 1rem; border-radius: 0.75rem; margin-top: 1.5rem;
+      font-size: 0.75rem; border-left: 3px solid #1E90FF;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate { animation: fadeUp 0.8s ease forwards; }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
+      background: #1E90FF; color: #FFFFFF; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; cursor: pointer; opacity: 0;
+      visibility: hidden; transition: all 0.3s; z-index: 99; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .back-to-top.show { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: #0066CC; transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+        Veloxnet
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#contato" class="btn btn-primary" style="display: none; background: #1E90FF;" id="contactBtnDesktop">Assinar Agora</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge animate" style="animation-delay: 0s;">
+          <i class="fas fa-wifi"></i>
+          <span>Internet de Alta Velocidade desde 2017</span>
+        </div>
+        <h1 class="animate" style="animation-delay: 0.2s;">Conexão Rápida e Estável em São Paulo</h1>
+        <p class="hero-desc animate" style="animation-delay: 0.4s;">A Veloxnet oferece serviços de comunicação multimídia (SCM) com tecnologia de ponta, garantindo velocidade, estabilidade e suporte dedicado para sua casa ou empresa.</p>
+        <div class="hero-stats animate" style="animation-delay: 0.6s;">
+          <div class="hero-stat">
+            <div class="number">2017</div>
+            <div class="label">Ano de Fundação</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">100%</div>
+            <div class="label">Fibra Óptica</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">24/7</div>
+            <div class="label">Suporte Técnico</div>
+          </div>
+        </div>
+        <div class="hero-buttons animate" style="animation-delay: 0.8s;">
+          <a href="#planos" class="btn btn-primary btn-lg">Conheça Nossos Planos</a>
+          <a href="#contato" class="btn btn-outline btn-lg">Fale Conosco</a>
+        </div>
+        <div class="hero-disclaimer animate" style="animation-delay: 1s;">
+          <i class="fas fa-shield-alt"></i>
+          <p><strong>Aviso:</strong> Este é o site oficial da empresa <strong>Veloxnet Internet de Alta Velocidade LTDA — CNPJ 29.112.460/0001-93</strong>. <strong>Não somos um órgão governamental</strong> e <strong>não compartilhamos dados de clientes</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-number">2017</div>
+          <div class="stat-label">Ano de Fundação</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number">10.000+</div>
+          <div class="stat-label">Clientes Conectados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <div class="stat-number">1 Gbps</div>
+          <div class="stat-label">Velocidade Máxima</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-star"></i></div>
+          <div class="stat-number">4.8</div>
+          <div class="stat-label">Avaliação dos Clientes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Nossa História</span>
+        <h2>Sobre a Veloxnet</h2>
+        <p class="section-desc">Conheça a trajetória do provedor que conecta São Paulo com alta velocidade</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <h3 style="color: #1E90FF; margin-bottom: 1rem;">Tecnologia e confiança desde 2017</h3>
+          <p style="margin-bottom: 1rem; color: #4A4A4A;">A <strong>Veloxnet Internet de Alta Velocidade LTDA</strong>, com <strong>CNPJ 29.112.460/0001-93</strong>, foi fundada em <strong>21 de novembro de 2017</strong> na cidade de <strong>São Paulo - SP</strong>. Nossa atividade principal é <strong>Serviços de Comunicação Multimídia (SCM)</strong> — CNAE 61.10-8-03.</p>
+          <p style="margin-bottom: 1rem; color: #4A4A4A;">Oferecemos conexão de internet de alta velocidade com tecnologia de fibra óptica, garantindo estabilidade, baixa latência e suporte técnico especializado para residências e empresas.</p>
+          <p style="color: #4A4A4A;">Nossa missão é conectar pessoas e negócios com qualidade, transparência e atendimento personalizado, contribuindo para o desenvolvimento digital da região.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+            <div><i class="fas fa-check-circle" style="color: #1E90FF;"></i> Fibra óptica</div>
+            <div><i class="fas fa-check-circle" style="color: #1E90FF;"></i> Suporte 24/7</div>
+            <div><i class="fas fa-check-circle" style="color: #1E90FF;"></i> Planos personalizados</div>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, #E6F0FA, #D0E4F5); border-radius: 1.5rem; padding: 2rem; text-align: center;">
+          <i class="fas fa-wifi" style="font-size: 4rem; color: #1E90FF; margin-bottom: 1rem;"></i>
+          <p style="font-style: italic; color: #0A2540;">"Conectando você ao futuro com velocidade e confiança"</p>
+          <div style="margin-top: 1.5rem;">
+            <div style="font-weight: 600;">Veloxnet</div>
+            <div style="font-size: 0.8rem; color: #3A5A7A;">Desde 2017</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS SECTION -->
+  <section id="planos" class="section section-muted">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Planos</span>
+        <h2>Escolha o plano ideal para você</h2>
+        <p>Velocidade e benefícios para sua casa ou empresa</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-home"></i>
+            <div class="product-tag">Residencial</div>
+          </div>
+          <div class="product-info">
+            <h3>Velox 300 Mega</h3>
+            <p>Ideal para navegação, streaming e home office.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-tv"></i>
+            <div class="product-tag">Mais Vendido</div>
+          </div>
+          <div class="product-info">
+            <h3>Velox 500 Mega</h3>
+            <p>Perfeito para famílias conectadas e jogos online.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="product-info">
+            <h3>Velox 1 Giga</h3>
+            <p>Máxima velocidade para downloads e múltiplos dispositivos.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-building"></i>
+            <div class="product-tag">Empresarial</div>
+          </div>
+          <div class="product-info">
+            <h3>Velox Business</h3>
+            <p>Planos corporativos com IP fixo, SLA e suporte dedicado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Serviços Especializados</span>
+        <h2>Mais que internet, uma conexão completa</h2>
+        <p>Oferecemos soluções para residências, empresas e condomínios</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Fibra Óptica</h3>
+          <p>Conexão de alta velocidade com tecnologia FTTH, garantindo estabilidade e baixa latência.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Suporte 24/7</h3>
+          <p>Atendimento técnico especializado disponível todos os dias, a qualquer hora.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Segurança e Wi-Fi</h3>
+          <p>Equipamentos modernos e configuração segura para proteger sua rede.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Depoimentos</span>
+        <h2>O que nossos clientes dizem</h2>
+        <p>A satisfação de quem navega com a Veloxnet</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">"A Veloxnet mudou minha experiência na internet. Velocidade incrível e nunca cai. Recomendo para todos!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="testimonial-info">
+              <h4>Ana Paula R.</h4>
+              <p>Cliente desde 2019</p>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"Contratei o plano empresarial e nossa produtividade aumentou muito. Suporte técnico rápido e eficiente."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="testimonial-info">
+              <h4>Marcos T.</h4>
+              <p>Cliente desde 2018</p>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"Melhor provedor de São Paulo! Atendimento humano, preço justo e internet que não cai."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="testimonial-info">
+              <h4>Juliana M.</h4>
+              <p>Cliente desde 2021</p>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS SECTION -->
+  <section class="brands-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Parceiros Tecnológicos</span>
+        <h2>Utilizamos as melhores tecnologias</h2>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-item"><i class="fas fa-server"></i> Cisco</div>
+        <div class="brand-item"><i class="fas fa-ethernet"></i> Huawei</div>
+        <div class="brand-item"><i class="fas fa-microchip"></i> Intelbras</div>
+        <div class="brand-item"><i class="fas fa-satellite-dish"></i> Nokia</div>
+        <div class="brand-item"><i class="fas fa-route"></i> Mikrotik</div>
+        <div class="brand-item"><i class="fas fa-tower-cell"></i> Fiberhome</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="section section-muted">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Dúvidas Frequentes</span>
+        <h2>Perguntas Frequentes</h2>
+        <p>Tire suas dúvidas sobre nossos planos e serviços</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Qual a área de cobertura da Veloxnet?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Atendemos São Paulo e região metropolitana. Consulte disponibilidade pelo nosso WhatsApp ou formulário de contato.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Qual a velocidade máxima oferecida?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Oferecemos planos de até 1 Gbps (1.000 Mega) com tecnologia de fibra óptica.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Vocês fornecem dados pessoais de clientes?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">NÃO. A Veloxnet NÃO fornece, compartilha ou divulga dados pessoais de clientes ou terceiros. Respeitamos integralmente a Lei Geral de Proteção de Dados (LGPD).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Qual a política de cancelamento?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">O cliente pode solicitar cancelamento a qualquer momento, sem multa, conforme regulamentação da Anatel. Consulte nossa <button class="btn-legal-link" onclick="openModal('reembolso')" style="background:none; border:none; color:#1E90FF; cursor:pointer; text-decoration:underline;">Política de Cancelamento</button> completa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Vocês oferecem IP fixo?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Sim, planos empresariais podem incluir IP fixo. Consulte nossa equipe comercial para mais detalhes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Como faço para acompanhar meu chamado técnico?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Após abrir um chamado, você receberá um protocolo por e-mail ou WhatsApp para acompanhar o status em tempo real.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Fale Conosco</span>
+        <h2>Entre em Contato</h2>
+        <p>Estamos prontos para atendê-lo e tirar todas as suas dúvidas</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h3>Endereço</h3>
+          <p>Rua [INSERIR ENDEREÇO], nº [XXX]</p>
+          <p>São Paulo/SP</p>
+          <p>CEP: [INSERIR CEP]</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <h3>Telefone</h3>
+          <p><a href="tel:+551130000000">(11) 3000-0000</a></p>
+          <p><a href="https://wa.me/5511999999999">(11) 99999-9999 (WhatsApp)</a></p>
+          <p>Segunda a Sexta: 9h às 18h</p>
+          <p>Sábado: 9h às 13h</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h3>E-mail</h3>
+          <p><a href="mailto:contato@veloxnet.com.br">contato@veloxnet.com.br</a></p>
+          <p><a href="mailto:suporte@veloxnet.com.br">suporte@veloxnet.com.br</a></p>
+          <p>Respondemos em até 24h úteis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-container">
+        <div class="map-placeholder">
+          <i class="fas fa-map"></i>
+          <h3>Estamos localizados em São Paulo</h3>
+          <p>Rua [INSERIR ENDEREÇO] - Centro, São Paulo/SP</p>
+          <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Ver no Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            <span>Veloxnet</span>
+          </div>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Internet de alta velocidade desde 2017. Conexão estável e atendimento de qualidade em São Paulo.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <div class="footer-links">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#planos">Planos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <button onclick="openModal('privacidade')">Política de Privacidade</button>
+            <button onclick="openModal('lgpd')">Política de LGPD</button>
+            <button onclick="openModal('reembolso')">Política de Cancelamento</button>
+          </div>
+        </div>
+        <div>
+          <h4>Dados da Empresa</h4>
+          <div class="footer-data">
+            <p><strong>Razão Social:</strong> Veloxnet Internet de Alta Velocidade LTDA</p>
+            <p><strong>Nome Fantasia:</strong> Veloxnet</p>
+            <p><strong>CNPJ:</strong> 29.112.460/0001-93</p>
+            <p><strong>Fundação:</strong> 21/11/2017</p>
+            <p><strong>Atividade:</strong> 61.10-8-03 - SCM</p>
+            <p><strong>Situação:</strong> Ativa</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>©️ 2026 Veloxnet Internet de Alta Velocidade LTDA — CNPJ 29.112.460/0001-93. Todos os direitos reservados.</p>
+        <div class="footer-bottom-links">
+          <button onclick="openModal('privacidade')">Privacidade</button>
+          <button onclick="openModal('lgpd')">LGPD</button>
+          <button onclick="openModal('reembolso')">Cancelamento</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+      <h3><i class="fas fa-cookie-bite"></i> Utilizamos Cookies</h3>
+      <p>Este site utiliza cookies para melhorar sua experiência de navegação. Ao clicar em "Aceitar", você consente com o uso de cookies conforme nossa <button onclick="openModal('privacidade')" style="background:none; border:none; color:#1E90FF; cursor:pointer;">Política de Privacidade</button>.</p>
+      <div class="cookie-buttons">
+        <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        <button class="btn-outline-dark" id="cookie-decline" style="background:transparent; border:1px solid #ddd; padding:0.6rem;">Recusar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="legal-modal">
+    <div class="modal-content">
+      <div class="modal-close">
+        <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+    // Cookie Banner
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieDecline = document.getElementById('cookie-decline');
+
+    function hideCookieBanner() {
+      cookieBanner.classList.add('hidden');
+    }
+
+    if (localStorage.getItem('cookieConsent')) {
+      hideCookieBanner();
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      hideCookieBanner();
+    });
+
+    cookieDecline.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'declined');
+      hideCookieBanner();
+    });
+
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Modal functions
+    const modal = document.getElementById('legal-modal');
+    const modalBody = document.getElementById('modal-body');
+
+    const policies = {
+      privacidade: {
+        title: 'Política de Privacidade',
+        content: `<p><strong>Última atualização:</strong> Março de 2026</p>
+        <p>A <strong>Veloxnet Internet de Alta Velocidade LTDA</strong> (CNPJ 29.112.460/0001-93) valoriza e respeita a privacidade de seus clientes e visitantes.</p>
+        <h2>1. Dados Coletados</h2>
+        <p>Nome completo, CPF/CNPJ, e-mail, telefone, endereço e dados de navegação.</p>
+        <h2>2. Finalidade</h2>
+        <p>Prestação de serviços de internet, atendimento ao cliente, comunicações comerciais e cumprimento de obrigações legais.</p>
+        <h2>3. Compartilhamento</h2>
+        <p><strong>Não compartilhamos dados com terceiros</strong>, exceto para processamento de pagamentos e cumprimento de ordens judiciais.</p>
+        <div class="legal-notice"><strong>Aviso:</strong> Site particular, não vinculado a órgãos governamentais. Não compartilhamos dados de clientes.</div>`
+      },
+      lgpd: {
+        title: 'Política de LGPD',
+        content: `<p><strong>Última atualização:</strong> Março de 2026</p>
+        <p>Em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>.</p>
+        <h2>Controlador</h2>
+        <p>Veloxnet Internet de Alta Velocidade LTDA - CNPJ 29.112.460/0001-93</p>
+        <h2>Direitos do Titular</h2>
+        <ul><li>Confirmação de tratamento</li><li>Acesso aos dados</li><li>Correção de dados</li><li>Eliminação de dados</li><li>Revogação do consentimento</li></ul>
+        <p><strong>E-mail:</strong> privacidade@veloxnet.com.br</p>
+        <div class="legal-notice"><strong>Aviso:</strong> Site particular, não vinculado a órgãos governamentais.</div>`
+      },
+      reembolso: {
+        title: 'Política de Cancelamento',
+        content: `<p><strong>Última atualização:</strong> Março de 2026</p>
+        <h2>Direito de Cancelamento</h2>
+        <p>O cliente pode solicitar o cancelamento a qualquer momento, sem multa, conforme regulamentação da Anatel.</p>
+        <h2>Reembolso</h2>
+        <p>Valores pagos proporcionalmente ao período não utilizado serão reembolsados conforme legislação vigente.</p>
+        <h2>Como Solicitar</h2>
+        <p>E-mail: contato@veloxnet.com.br ou pelo WhatsApp (11) 99999-9999.</p>
+        <div class="legal-notice"><strong>Aviso:</strong> Site particular, não vinculado a órgãos governamentais.</div>`
+      }
+    };
+
+    function openModal(type) {
+      const policy = policies[type];
+      if (policy) {
+        modalBody.innerHTML = `<h1>${policy.title}</h1>${policy.content}`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Animate elements on scroll
+    const animateElements = document.querySelectorAll('.stat-card, .product-card, .service-card, .testimonial-card, .contact-card');
+    const animateObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          animateObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animateElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.6s ease';
+      animateObserver.observe(el);
+    });
+  </script>
+</body>
+</html>
